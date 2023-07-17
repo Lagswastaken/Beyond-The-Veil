@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv70rh7vsmfds"]
+
+[ext_resource type="PackedScene" uid="uid://6mmrhbfpku30" path="res://City.glb" id="1_846dc"]
+[ext_resource type="Script" path="res://city.gd" id="1_jxu2a"]
+[ext_resource type="PackedScene" uid="uid://cs6lcdod0mwpa" path="res://player.tscn" id="2_a5kq1"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_jxu2a")
+
+[node name="Player" parent="." instance=ExtResource("2_a5kq1")]
+transform = Transform3D(1, 0, 0, 0, 0.999949, 0.0101053, 0, -0.0101053, 0.999949, -1.25324, -2.30396, 19.0301)
+
+[node name="City" parent="." instance=ExtResource("1_846dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3565, -2.91037, 33.5868)
