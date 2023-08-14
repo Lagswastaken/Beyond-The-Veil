@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4kn0n115b33s"]
+
+[ext_resource type="ArrayMesh" uid="uid://be5kitkkeoomu" path="res://AlienBlaster.obj" id="1_t802u"]
+[ext_resource type="Texture2D" uid="uid://vrofi8wykw0w" path="res://alien_blaster_5.png" id="2_cnalh"]
+[ext_resource type="Texture2D" uid="uid://dwpsfk4orns0d" path="res://alien_blaster_3.png" id="3_ecpe2"]
+[ext_resource type="Texture2D" uid="uid://qpey3p1s8o7r" path="res://alien_blaster_1.png" id="4_52d6o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52y4"]
+albedo_color = Color(1, 1, 0.482353, 1)
+albedo_texture = ExtResource("2_cnalh")
+emission_enabled = true
+emission_energy_multiplier = 3.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pkd3"]
+albedo_texture = ExtResource("3_ecpe2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kely"]
+albedo_texture = ExtResource("4_52d6o")
+metallic = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_04gfl"]
+size = Vector3(1.24583, 0.524372, 3.44499)
+
+[node name="Blaster" type="Area3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108996, 0.0251384, 0.0343347)
+mesh = ExtResource("1_t802u")
+surface_material_override/0 = SubResource("StandardMaterial3D_y52y4")
+surface_material_override/1 = SubResource("StandardMaterial3D_6pkd3")
+surface_material_override/2 = SubResource("StandardMaterial3D_8kely")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.938487, 0, -0.345315, 0, 1, 0, 0.345315, 0, 0.938487, -0.642555, 0.287123, 1.14804)
+shape = SubResource("BoxShape3D_04gfl")

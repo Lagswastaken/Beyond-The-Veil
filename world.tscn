@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dh5thpqivt2bl"]
+
+[ext_resource type="Script" path="res://worldscript.gd" id="1_uksij"]
+[ext_resource type="PackedScene" uid="uid://cs6lcdod0mwpa" path="res://player.tscn" id="2_f26gi"]
+[ext_resource type="PackedScene" uid="uid://7bk5dktyctb8" path="res://City.glb" id="3_rh5ma"]
+[ext_resource type="PackedScene" uid="uid://b5viciisi1qry" path="res://Bilboard.glb" id="4_gkmvo"]
+[ext_resource type="PackedScene" uid="uid://d4kn0n115b33s" path="res://blaster.tscn" id="5_hhs1q"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_uksij")
+
+[node name="Bilboard" parent="." instance=ExtResource("4_gkmvo")]
+transform = Transform3D(-3.99891, 0, -0.0934713, 0, 4, 0, 0.0934713, 0, -3.99891, -37.5183, -14.0681, 100.217)
+
+[node name="Player2" parent="." instance=ExtResource("2_f26gi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5951, -13.3707, 103.799)
+
+[node name="City" parent="." instance=ExtResource("3_rh5ma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4146, -15.0791, 91.3161)
+
+[node name="Blaster" parent="." instance=ExtResource("5_hhs1q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0095, -14.9697, 102.35)

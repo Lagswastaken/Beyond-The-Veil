@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be5kitkkeoomu"
+path="res://.godot/imported/AlienBlaster.obj-9eda3c41e5f10f147d1cf5fb807f30cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AlienBlaster.obj-9eda3c41e5f10f147d1cf5fb807f30cc.mesh"]
+
+source_file="res://AlienBlaster.obj"
+dest_files=["res://.godot/imported/AlienBlaster.obj-9eda3c41e5f10f147d1cf5fb807f30cc.mesh", "res://.godot/imported/AlienBlaster.obj-9eda3c41e5f10f147d1cf5fb807f30cc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
