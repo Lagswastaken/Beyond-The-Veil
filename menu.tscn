@@ -1,22 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://c77mu3huvsg5e"]
+[gd_scene load_steps=3 format=3 uid="uid://c77mu3huvsg5e"]
 
+[ext_resource type="Script" path="res://menu.gd" id="1_gqp0d"]
 [ext_resource type="Texture2D" uid="uid://cnuojlpsdfgfa" path="res://Menu (1).png" id="1_t7nqd"]
 
 [node name="Menu Node" type="Node2D"]
+script = ExtResource("1_gqp0d")
 
 [node name="Menu Image" type="Sprite2D" parent="."]
 position = Vector2(958, 537)
 texture = ExtResource("1_t7nqd")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -1.0
+offset_top = 654.0
+offset_right = 1921.0
+offset_bottom = 1593.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "Start
+"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "Quit
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

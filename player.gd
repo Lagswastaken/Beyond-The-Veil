@@ -26,7 +26,8 @@ func check_ray_hit():
 		if ray.get_collider().is_in_group("Pickup"):
 			interaction_notify.visible = true
 		if Input.is_action_just_pressed("Use"):
-			ray.get_collider().queue_free()
+			
+			#ray.get_collider().queue_free()
 			objects_collected += 1
 			collection_tracker.text = "Mysterious Objects: " + str(objects_collected) + " /8"
 	else:
@@ -47,7 +48,6 @@ func _unhandled_input(event):
 		get_tree().quit()
 	
 func _physics_process(delta):
-	if not is_multiplayer_authority(): return
 	check_ray_hit()
 	
 	# Add the gravity.
