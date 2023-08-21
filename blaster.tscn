@@ -21,7 +21,7 @@ metallic = 1.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_04gfl"]
 size = Vector3(1.24583, 0.524372, 3.44499)
 
-[node name="Blaster" type="Area3D"]
+[node name="Blaster" type="Area3D" groups=["Pickup"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108996, 0.0251384, 0.0343347)

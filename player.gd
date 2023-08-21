@@ -22,12 +22,12 @@ const JUMP_VELOCITY = 6.0
 var gravity = 60.0
 
 func check_ray_hit():
-	if ray.is_colliding():
+	var collider = ray.get_collider()
+	if ray.is_colliding() and collider:
 		if ray.get_collider().is_in_group("Pickup"):
 			interaction_notify.visible = true
 		if Input.is_action_just_pressed("Use"):
-			
-			#ray.get_collider().queue_free()
+			ray.get_collider().queue_free()
 			objects_collected += 1
 			collection_tracker.text = "Mysterious Objects: " + str(objects_collected) + " /8"
 	else:

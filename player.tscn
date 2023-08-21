@@ -22,7 +22,7 @@ mesh = SubResource("CapsuleMesh_tuhfh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.526467, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-transform = Transform3D(-0.998716, 0, -0.0506627, 0, 1, 0, 0.0506627, 0, -0.998716, 0, 0, -0.235241)
+transform = Transform3D(-1.99743, 0, -0.101325, 0, 2, 0, 0.101325, 0, -1.99743, 0, 0, -0.235241)
 target_position = Vector3(0, 0, 1.5)
 collide_with_areas = true
 collide_with_bodies = false

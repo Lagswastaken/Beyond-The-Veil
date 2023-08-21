@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5k5hg30evmx"]
+
+[ext_resource type="PackedScene" uid="uid://v0hmq5u1uoho" path="res://GROSSHAND.glb" id="1_oinas"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p7jtk"]
+size = Vector3(0.225029, 0.117155, 0.605739)
+
+[node name="Hand" type="Area3D" groups=["Pickup"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0950885, -0.0302207)
+shape = SubResource("BoxShape3D_p7jtk")
+
+[node name="GROSSHAND" parent="." instance=ExtResource("1_oinas")]
